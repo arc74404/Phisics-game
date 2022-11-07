@@ -1,4 +1,5 @@
 #include "current.hpp"
+#include "current.hpp"
 #include "constParametrs.hpp"
 
 #include <SFML/Graphics.hpp>
@@ -16,13 +17,11 @@ private:
 
 	float speed;
 
-	sf::Vector2f acceleration;//хранит в себе информацию, на сколько пикселей передвигать объект
-
 public:
 
 	sf::Vector2f vector_coordinates;//направление в точках перемещения
 	
-	void setPosition(sf::Vector2f);
+	void move(sf::Vector2f);
 
 	Object(constParametrs a);
 
