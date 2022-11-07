@@ -9,9 +9,9 @@ void Object::create_shape()
     shape = shape2;
 }
 
-void Object::setPosition(sf::Vector2f pp)
+void Object::move(sf::Vector2f pp)
 {
-    shape.setPosition(pp);
+    shape.move(pp);
 }
 
 Object::Object(constParametrs a)
