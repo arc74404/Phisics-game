@@ -18,8 +18,10 @@ public:
     current & operator=(const current& other);
 
     void setPowerModule(float);
+    float getPowerModule();
 
     void setVector_coordinates();
+    
 };
 
 #endif // !CURRENTS_HPP 
