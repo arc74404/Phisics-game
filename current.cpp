@@ -16,8 +16,11 @@ current::current( float dd){
 void current::setPowerModule(float pm){
     this->power_module = pm;
 }
+float current::getPowerModule(){
+    return this->power_module;
+}
 void current::setVector_coordinates()
 {
     vector_coordinates.x = sin(direction * PI/180) * power_module;
-    vector_coordinates.x = sin((90 - direction) * PI/180) * power_module;
+    vector_coordinates.y = -(cos(direction * PI/180) * power_module);
 }
