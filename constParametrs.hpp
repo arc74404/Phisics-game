@@ -3,7 +3,7 @@
 
 class constParametrs {
 public:
-    float weight;
+    float weight;//масса
 
     float length;
 

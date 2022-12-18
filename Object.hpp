@@ -1,11 +1,8 @@
-#include "current.hpp"
-#include "current.hpp"
-#include "constParametrs.hpp"
-
-#include <SFML/Graphics.hpp>
-
 #ifndef OBJECT_HPP
 #define OBJECT_HPP
+#include "current.hpp"
+#include "constParametrs.hpp"
+#include <SFML/Graphics.hpp>
 
 class Object
 {
@@ -15,21 +12,37 @@ private:
 
 	constParametrs parametrs;
 
-	float speed;
+	current resultant;
 
+	sf::Clock clockTime;
+
+	double time;
+
+	int number;
+
+	current impuls;
+	current gravity;
 public:
 
-	sf::Vector2f vector_coordinates;//направление в точках перемещения
+	sf::Vector2f speedVect;
+	float speed;
+
+	bool WasTouch;	
 	
-	void move(sf::Vector2f);
+	sf::Vector2f A;
+	
+	void move(const Object& other);
 
-	Object(constParametrs a);
+	Object(constParametrs a, int n);
 
-	current get_resultant();
-
+	void get_resultant(const Object&);
+	
 	sf::RectangleShape shape;
 
-	void Object::setVector_coordinates();
+	void setSpeed();
+	void setSpeedWithHook(const Object&);
+
+	void printData();
 };
 
 #endif // !OBJECT_HPP
