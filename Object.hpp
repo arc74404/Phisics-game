@@ -1,48 +1,48 @@
 #ifndef OBJECT_HPP
 #define OBJECT_HPP
-#include "current.hpp"
-#include "constParametrs.hpp"
 #include <SFML/Graphics.hpp>
+
+#include "constParametrs.hpp"
+#include "current.hpp"
 
 class Object
 {
 private:
+    void create_shape();
 
-	void create_shape();
+    constParametrs parametrs;
 
-	constParametrs parametrs;
+    current resultant;
 
-	current resultant;
+    sf::Clock clockTime;
 
-	sf::Clock clockTime;
+    double time;
 
-	double time;
+    int number;
 
-	int number;
+    current impuls;
+    current gravity;
 
-	current impuls;
-	current gravity;
 public:
+    sf::Vector2f speedVect;
+    float speed;
 
-	sf::Vector2f speedVect;
-	float speed;
+    bool WasTouch;
 
-	bool WasTouch;	
-	
-	sf::Vector2f A;
-	
-	void move(const Object& other);
+    sf::Vector2f A;
 
-	Object(constParametrs a, int n);
+    void move(const Object& other);
 
-	void get_resultant(const Object&);
-	
-	sf::RectangleShape shape;
+    Object(constParametrs a, int n);
 
-	void setSpeed();
-	void setSpeedWithHook(const Object&);
+    void get_resultant(const Object&);
 
-	void printData();
+    sf::RectangleShape shape;
+
+    void setSpeed();
+    void setSpeedWithHook(const Object&);
+
+    void printData();
 };
 
 #endif // !OBJECT_HPP

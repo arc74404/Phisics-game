@@ -1,9 +1,10 @@
 #ifndef CONSTPARAMETRS_HPP
 #define CONSTPARAMETRS_HPP
 
-class constParametrs {
+class constParametrs
+{
 public:
-    float weight;//масса
+    float weight; // масса
 
     float length;
 
@@ -11,9 +12,8 @@ public:
 
     constParametrs(float weight, float length, float width);
 
-	constParametrs();
+    constParametrs();
 
-    constParametrs(const constParametrs &);
-
+    constParametrs(const constParametrs&);
 };
 #endif // !CONSTPARAMETRS_HPP

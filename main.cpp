@@ -1,8 +1,10 @@
-#include "game.hpp"
+#include <iostream>
 
-int main()
+#include "game.hpp"
+int
+main()
 {
     game mainGame;
-    mainGame.run();   
+    mainGame.run();
     return 0;
 }
